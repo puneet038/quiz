@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
+html{
+    font-size: medium;
+}
+.main-div
+{
+    width: 100vw;
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+   background-color: hsl(258, 82%, 33%);
+
+}
+.inner-div
+{
+    width: auto;
+    background-color:honeydew;
+    padding: 3rem 8rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem  1rem  rgba(rgb(51, 255, 0), rgb(0, 128, 58), rgb(0, 255, 136), alpha)
+}
+.inner-div h2{
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+.inner-div li{
+    font-size: 2rem;
+    margin: 1.5rem;
+    
+}
+input{
+    cursor: pointer;
+}
+#submit,.btn
+{
+    padding: 1rem,2rem;
+    outline:none;
+    font-size: 2rem;
+    margin: auto;
+    display:block;
+    color: #fff;
+    background-color:  #74b9ff;;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+#submit
+{
+    background-color: rgb(0, 88, 139);
+}
+#submit:hover
+{
+    background-color: darkblue;
+}
+#showscore
+{
+    margin-top: 3rem;
+    padding: 2rem 3rem;
+    background-color: darkgray;
+    box-shadow: 0 1rem  1rem --0.70rem rgba(rgb(51, 255, 0), rgb(0, 128, 58), rgb(0, 255, 136), alpha)
+}
+.scaorearea
+{
+    display:grid;
+}
+#showScore .btn{
+    margin-top: 2rem;
+    background-color: cyan;
+    color: gray;
+}
+#showScore h3{
+    font-size: 3rem;
+    text-align: center;
+}
