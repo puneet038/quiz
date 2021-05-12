@@ -1,12 +1,11 @@
 const quizdb=
 [
     {
-    question:"Q1. A process that involves recognizing and focusing on the important characteristics of a situation or object is known as:",
-
-a: "Encapsulation",
-b: "Polymorphism",
-c: "Abstraction",
-d:"Inheritance",
+    question:"Q1. HTML stands for -",
+a: "HighText Machine Language",
+b: "HyperText and links Markup Language",
+c: "HyperText Markup Language",
+d:"None of these",
 ans: "ans1"
     },
     
@@ -106,6 +105,10 @@ ans: "ans1"
                                     return answer;
 
                                 }
+                                 const deSelect = () =>
+                                 {
+                                    answers.forEach((currentelement) => currentelement.checked=false);
+                                 }
                                 submit.addEventListener('click',() =>
                                 {
                                     const checkAnswer=getcheckanswer();
@@ -115,14 +118,18 @@ ans: "ans1"
                                        score++;
                                     };
                                     countquestion++;
+                                    deSelect();
                                     if(countquestion<quizdb.length)
                                     {
                                         uploadquestion();
                                     }
                                    else{
-                                   var pro=(score/quizdb.length)*100;
-                                   console.log(pro+"%");
-                                   document.write(pro);
+                                    showscore.innerHTML=`
+                                    <h1>your score is ${score}/${quizdb.length}</h1>
+                                     <button class ="btn" onclick ="location.reload()">play again</button>
+                                     
+                                    `
+                                    showscore.classList.remove(scaorearea);
                                    }
 
                                 });
